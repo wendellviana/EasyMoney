@@ -41,7 +41,7 @@ public class ServletGeral extends HttpServlet{
 		String nome = "";
 		String cpf = "";
 		// Abre a pagina na qual se iniciará o programa.
-		if (path.equals("/home.do")) {
+		if (path.equals("/solicitarPorposta.do")) {
 			forward = "/WEB-INF/jsp/home.jsp";
 		}
 		

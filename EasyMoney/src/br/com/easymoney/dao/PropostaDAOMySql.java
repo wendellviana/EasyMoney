@@ -12,19 +12,6 @@ import br.com.easymoney.model.PropostaVO;
 
 public class PropostaDAOMySql extends GenericDAO {
 	
-	private Connection obterConexao() {
-		Connection conexao = null;
-		try {
-			Class.forName("org.postgresql.Driver");
-			conexao = DriverManager.getConnection("jdbc:postgresql://localhost:5432/scpv", "postgres", "admin");
-		} catch (ClassNotFoundException cnfe) {
-			throw new RuntimeException(cnfe);
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
-		}
-		return conexao;
-	}
-
 	public void incluirProposta(PropostaVO pessoa) {
 		Connection con = null;
 		try {
@@ -32,10 +19,10 @@ public class PropostaDAOMySql extends GenericDAO {
 
 			Statement stm = con.createStatement();
 
-			String SQL = "insert into proposta (p_id, baco, agencia, data_nascimento, papel)" +
-			"values (" + "'" + pessoa.getNome() + " '" + "," + "'" + pessoa.getCpf() + "'" + "," + "'" + pessoa.getSexo() + "'" + "," + "'" + pessoa.getDataNasc() + "'" + "," + "'" + pessoa.getPapel() + "')";
-			System.out.println("Sql: " + SQL);
-			stm.executeUpdate(SQL);
+//			String SQL = "insert into proposta (p_id, baco, agencia, data_nascimento, papel)" +
+//			"values (" + "'" + pessoa.getNome() + " '" + "," + "'" + pessoa.getCpf() + "'" + "," + "'" + pessoa.getSexo() + "'" + "," + "'" + pessoa.getDataNasc() + "'" + "," + "'" + pessoa.getPapel() + "')";
+//			System.out.println("Sql: " + SQL);
+//			stm.executeUpdate(SQL);
 			
 		} catch (SQLException e) {
 			throw new RuntimeException(e);

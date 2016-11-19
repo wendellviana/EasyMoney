@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class GenericDAO {
 
-	private Connection obterConexao() {
+	public Connection obterConexao() {
 		Connection conexao = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
