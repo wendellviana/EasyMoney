@@ -1,0 +1,10 @@
+applications:
+- path: mendixBoilerplate.war
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: EasyMoney
+  host: easymoney2
+  disk_quota: 1024M
+  services:
+  - EasyMoney-cleardb
